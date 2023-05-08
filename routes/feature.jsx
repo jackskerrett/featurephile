@@ -2,8 +2,8 @@ import { useLoaderData } from "react-router-dom";
 
 import { getFeature } from "../src/features";
 
-export function loader() {
-  const feature = getFeature();
+export function loader({ params }) {
+  const feature = getFeature(params.featureId);
   return feature;
 }
 

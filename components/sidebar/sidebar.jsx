@@ -1,14 +1,18 @@
-import { Form } from "react-router-dom";
+import "./sidebar.css"
+import { Link } from "react-router-dom";
 
-export default Sidebar => {
+
+
+export default function Sidebar(props) {
+
     return (
         <div id="sidebar">
             <h1>Featurephile</h1>
-            <Form>
-                <button type="submit">New Feature!</button>
-            </Form>
-            <ul>
-                <li><a>Link!</a></li>
+            <ul id="featureSelector">
+                {props.features.map(feature => {
+                    return <li key={feature.id}><Link to={`/features/${feature.id}`}>{feature.name}</Link></li>
+                })}
+                
             </ul>
         </div>
     )
