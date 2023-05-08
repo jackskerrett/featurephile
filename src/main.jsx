@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import "./index.css"
-import Root from "../routes/root";
+import Root, {loader as allFeaturesLoader} from "../routes/root";
 import Feature, { loader as featureLoader } from "../routes/feature";
 import Index from "../routes/index"
 
@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    loader: allFeaturesLoader,
     children: [
       {
         index: true,

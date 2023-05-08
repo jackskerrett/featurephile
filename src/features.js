@@ -109,6 +109,9 @@ const two = {
 };
 
 export function getFeature(id) {
-  console.log(id);
-  return one;
+  return (id == 123 ? one : two);
+}
+
+export function getAllFeatures() {
+  return [1,2,3,4];
 }
