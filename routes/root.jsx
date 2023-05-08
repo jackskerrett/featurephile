@@ -8,9 +8,11 @@ export function loader({ params }) {
 }
 
 export default (Root) => {
+  const listOfFeatures = useLoaderData();
+
   return (
     <div id="app">
-      <Sidebar />
+      <Sidebar features={listOfFeatures}/>
       <div id="display">
         <Outlet />
       </div>

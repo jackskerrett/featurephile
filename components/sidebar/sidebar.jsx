@@ -2,12 +2,15 @@ import "./sidebar.css"
 
 
 
-export default Sidebar => {
+export default function Sidebar(props) {
     return (
         <div id="sidebar">
             <h1>Featurephile</h1>
             <ul id="featureSelector">
-                <li><a>Link!</a></li>
+                {props.features.map(feature => {
+                    return <li><a>{feature}</a></li>
+                })}
+                
             </ul>
         </div>
     )
