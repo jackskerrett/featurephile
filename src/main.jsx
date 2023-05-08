@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         element: <Index />
       },
       {
-        path: "/feature/:id",
+        path: "/feature/:featureId",
         element: <Feature />,
         loader: featureLoader
       }

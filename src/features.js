@@ -109,5 +109,6 @@ const two = {
 };
 
 export function getFeature(id) {
-
+  console.log(id);
+  return one;
 }
