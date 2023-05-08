@@ -1,4 +1,4 @@
-const feature = {
+const one = {
   name: "Feature: Suck a dick",
   valueStatement: "As a, I want, so that",
   rules: [
@@ -53,6 +53,61 @@ const feature = {
   ],
 };
 
-export function getFeature() {
-  return feature;
+const two = {
+  name: "Feature: Lick a dick",
+  valueStatement: "Oh No!",
+  rules: [
+    {
+      id: "r3",
+      name: "Rule: I am a rule",
+      scenarios: [
+        {
+          id: "sc3",
+          name: "Scenario: This thing happened",
+          steps: [
+            {
+              id: "sc3.1",
+              text: "Given this thing",
+            },
+            {
+              id: "sc3.2",
+              text: "When this thing",
+            },
+            {
+              id: "sc3.3",
+              text: "Then this thing",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "r4",
+      name: "Rule: Rule 4",
+      scenarios: [
+        {
+          id: "sc4",
+          name: "Scenario: That thing happened",
+          steps: [
+            {
+              id: "sc4.1",
+              text: "Given that thing",
+            },
+            {
+              id: "sc4.2",
+              text: "When that thing",
+            },
+            {
+              id: "sc4.3",
+              text: "Then that thing",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export function getFeature(id) {
+
 }
