@@ -1,4 +1,18 @@
-#featureSelector {
+#feature-selector {
     list-style-type: none;
     padding-left: 10px;
+}
+
+#feature-selector li {
+    padding: 5px 0px;
+}
+
+#feature-link {
+    color: black;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+#feature-link:hover {
+    color: #9DD9D2;
 }
