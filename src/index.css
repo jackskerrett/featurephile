@@ -13,16 +13,17 @@ body {
 }
 
 #sidebar {
-    background-color: #e8ebe9;
+    background-color: #C1D0B5;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     border-bottom: 1px solid;
-    padding: 0 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 #display {
     grid-column: 2 / -1;
-    background-color: lavender;
+    background-color: white;
     border-bottom: 1px solid;
     border-left: 1px solid;
     display: flex;

@@ -1,4 +1,30 @@
-#featureSelector {
+#feature-selector {
     list-style-type: none;
     padding-left: 10px;
+}
+
+#feature-selector li {
+    padding: 5px 0px;
+}
+
+#feature-link {
+    color: black;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+#feature-link:hover {
+    color: #9DD9D2;
+}
+
+#title {
+    border-bottom: 1px solid;
+    padding: 0px 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#heading {
+    text-decoration: none;
+    font-weight: 100;
+    color: black;
 }
