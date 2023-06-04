@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div id="navbar">
-      <Link to="/" id="logo"><h1>Featurephile</h1></Link>
+      <h1><Link to="/">Featurephile</Link></h1>
     </div>
   );
 }
