@@ -1,8 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 
-export function loader({ params }) {
-  const feature = "test";
-  return feature;
+export async function loader({ params }) {
+  const response = await fetch("/api/features");
+  const feature = await response.json();
+  console.log(feature);
+  return feature[0];
 }
 
 export default function Feature() {
@@ -12,7 +14,6 @@ export default function Feature() {
     <div id="feature">
       <h1>{feature.name}</h1>
       <p id="valueStatement">{feature.valueStatement}</p>
-      <p>{feature}</p>
     </div>
   );
 };

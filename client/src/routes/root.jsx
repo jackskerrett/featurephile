@@ -5,7 +5,6 @@ import Navbar from "../components/navbar/navbar";
 export async function loader({ params }) {
   const response = await fetch("/api/features");
   const features = await response.json();
-  console.log(features);
   return features;
 }
 

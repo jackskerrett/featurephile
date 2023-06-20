@@ -3,7 +3,7 @@ const { Client } = pkg;
 const dotenv = require("dotenv");
 dotenv.config();
 
-export async function connectDb(query) {
+async function connectDb(query) {
     try {
       const client = new Client({
         user: process.env.PGUSER,
@@ -20,4 +20,5 @@ export async function connectDb(query) {
       console.log(error);
     }
   };
-  connectDb();
+
+module.exports = connectDb;
