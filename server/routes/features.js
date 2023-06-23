@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const get_list_of_features = require("../queries/features_list");
+const get_feature_file = require("../queries/feature_file");
 
 router.get("/", async (req, res) => {
   try {
@@ -11,9 +12,10 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:feature_id", async (req, res) => {
+router.get("/:featureId", async (req, res) => {
   try {
-    const feature_file = await get_feature_file();
+    console.log(req.params.featureId);
+    const feature_file = await get_feature_file(req.params.featureId);
     res.json(feature_file);
   } catch (error) {
     console.error(error);
