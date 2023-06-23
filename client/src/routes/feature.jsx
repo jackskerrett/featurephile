@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 export async function loader({ params }) {
   const response = await fetch("/api/features");
   const feature = await response.json();
-  console.log(feature);
   return feature[0];
 }
 

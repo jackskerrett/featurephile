@@ -6,7 +6,7 @@ async function get_list_of_features() {
   const result = await client.query(query);
   const features = result.rows;
   client.release();
-  console.log(features);
+  return features;
 }
 
-get_list_of_features();
+module.exports = get_list_of_features;

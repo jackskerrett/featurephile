@@ -9,7 +9,7 @@ export default function Sidebar(props) {
           return (
             <li key={feature.id}>
               <Link id="feature-link" to={`/features/${feature.id}`}>
-                {feature.name}
+                {feature.title}
               </Link>
             </li>
           );
