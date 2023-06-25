@@ -1,8 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 
 export async function loader({ params }) {
-  const response = await fetch("/api/features");
+  const response = await fetch(`/api/features/${params.featureId}`);
   const feature = await response.json();
+  console.log(feature);
   return feature[0];
 }
 
@@ -11,8 +12,9 @@ export default function Feature() {
   
   return (
     <div id="feature">
-      <h1>{feature.name}</h1>
-      <p id="valueStatement">{feature.valueStatement}</p>
+      <h1>{feature.feature_title}</h1>
+      <p id="valueStatement">{feature.value_statement}</p>
+      <p>Rule: {feature.rule_title}</p>
     </div>
   );
 };

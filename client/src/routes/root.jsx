@@ -3,10 +3,8 @@ import Sidebar from "../components/sidebar/sidebar";
 import Navbar from "../components/navbar/navbar";
 
 export async function loader(params) {
-  const { featureId } = params
-  const response = await fetch(`/api/features/${featureId}`);
+  const response = await fetch("/api/features/");
   const features = await response.json();
-  console.log(features);
   return features;
 }
 

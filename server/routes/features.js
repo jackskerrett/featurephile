@@ -14,12 +14,11 @@ router.get("/", async (req, res) => {
 
 router.get("/:featureId", async (req, res) => {
   try {
-    console.log(req.params.featureId);
     const feature_file = await get_feature_file(req.params.featureId);
     res.json(feature_file);
   } catch (error) {
     console.error(error);
   }
-})
+});
 
 module.exports = router;
