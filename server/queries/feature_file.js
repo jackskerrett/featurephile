@@ -2,7 +2,6 @@ const pool = require("./config");
 
 async function get_feature_file(id) {
   const client = await pool.connect();
-  console.log("here");
   const query = `
   SELECT f.title AS feature_title,
   f.value_statement,
